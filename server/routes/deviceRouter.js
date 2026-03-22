@@ -1,8 +1,12 @@
 const Router = require("express");
-const Router = new router();
+const router = new Router();
 
-router.post("/");
-router.get("/");
+router.post("/", (req, res) => {
+  res.json({ message: "WORKING" });
+});
+router.get("/", (req, res) => {
+  res.json({ message: "WORKING" });
+});
 router.get("/:id");
 
 module.exports = router;
