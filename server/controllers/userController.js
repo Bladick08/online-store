@@ -1,3 +1,4 @@
+const ApiError = require("../error/ApiError");
 class UserController {
   async registration(req, res) {
     res.json({ message: "registration" });
@@ -7,9 +8,12 @@ class UserController {
     res.json({ message: "login" });
   }
 
-  async check(req, res) {
-    const query = req.user;
-    res.json({ message: "check" });
+  async check(req, res, next) {
+    const { id } = req.query;
+    if (!id) {
+      return next(ApiError.BadRequest("User not found"));
+    }
+    res.json({ message: "5" });
   }
 }
 
