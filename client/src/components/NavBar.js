@@ -1,18 +1,21 @@
-import { Navbar, Nav, Container, Button } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
-import { useContext } from "react";
+import React, { useContext } from "react";
+import Navbar from "react-bootstrap/NavBar";
+import Nav from "react-bootstrap/Nav";
 import { Context } from "../index";
 
 const NavBar = () => {
-  const { user } = useContext(Context);
+  useContext(Context);
   return (
     <Navbar bg="dark" variant="dark">
-      <Container>
-        <NavLink to="/">Shop</NavLink>
-        <Nav className="ml-auto">
-          <Button variant="outline-light">Login</Button>
-        </Nav>
-      </Container>
+      <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+
+      <Nav className="mr-auto">
+        <Nav.Link href="#home">Home</Nav.Link>
+        <Nav.Link href="#features">Features</Nav.Link>
+        <Nav.Link href="#pricing">Pricing</Nav.Link>
+      </Nav>
     </Navbar>
   );
 };
+
+export default NavBar;
