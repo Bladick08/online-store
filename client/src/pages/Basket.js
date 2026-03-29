@@ -1,5 +1,5 @@
 import React from "react";
 const Basket = () => {
-  return <div>BASKETPAGE</div>;
+  return <div>BASKET</div>;
 };
 export default Basket;

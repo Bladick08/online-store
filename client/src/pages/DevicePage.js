@@ -1,5 +1,5 @@
 import React from "react";
 const DevicePage = () => {
-  return <div>DEVICE PAGE</div>;
+  return <div>DEVICE</div>;
 };
 export default DevicePage;

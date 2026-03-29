@@ -1,6 +1,6 @@
 import React from "react";
 
 const Auth = () => {
-  return <div>AUTH PAGE</div>;
+  return <div>AUTH</div>;
 };
 export default Auth;
