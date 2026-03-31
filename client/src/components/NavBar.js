@@ -14,7 +14,7 @@ const NavBar = observer(() => {
     <Navbar bg="dark" variant="dark">
       <Container>
         <NavLink style={{ color: "white" }} to={SHOP_ROUTE}>
-          ShopDevise
+          TeleStore
         </NavLink>
         {user.isAuth ? (
           <Nav className="ml-auto" style={{ color: "white" }}>

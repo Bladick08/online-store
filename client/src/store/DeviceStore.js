@@ -3,8 +3,10 @@ import { makeAutoObservable } from "mobx";
 export default class DeviceStore {
   constructor() {
     this._types = [
-      { id: 1, name: "Холодильники" },
-      { id: 2, name: "Смартфоны" },
+      { id: 1, name: "Refrigerators" },
+      { id: 2, name: "Smartphones" },
+      { id: 3, name: "Laptops" },
+      { id: 4, name: "TV" },
     ];
     this._brands = [
       { id: 1, name: "Samsung" },
@@ -26,6 +28,7 @@ export default class DeviceStore {
         img: "https://www.ixbt.com/img/n1/news/2020/4/2/samsung-galaxy-a51.jpg",
       },
     ];
+    this._selectedType = {};
     makeAutoObservable(this);
   }
   setTypes(types) {
@@ -37,6 +40,9 @@ export default class DeviceStore {
   setDevices(devices) {
     this._devices = devices;
   }
+  setSelectedType(type) {
+    this._selectedType = type;
+  }
   get types() {
     return this._types;
   }
@@ -45,5 +51,8 @@ export default class DeviceStore {
   }
   get devices() {
     return this._devices;
+  }
+  get selectedType() {
+    return this._selectedType;
   }
 }
