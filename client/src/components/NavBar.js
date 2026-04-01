@@ -17,14 +17,20 @@ const NavBar = observer(() => {
           TeleStore
         </NavLink>
         {user.isAuth ? (
-          <Nav className="ml-auto" style={{ color: "white" }}>
+          <Nav
+            className="ms-auto d-flex align-items-center gap-2"
+            style={{ color: "white" }}
+          >
             <Button variant={"outline-light"} className="">
               login
             </Button>
             <Button variant={"outline-light"}>Administration</Button>
           </Nav>
         ) : (
-          <Nav className="ml-auto" style={{ color: "white" }}>
+          <Nav
+            className="ms-auto d-flex align-items-center gap-2"
+            style={{ color: "white" }}
+          >
             <Button
               variant={"outline-light"}
               onClick={() => user.setIsAuth(true)}
