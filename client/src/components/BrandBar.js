@@ -6,9 +6,9 @@ import { useContext } from "react";
 const BrandBar = observer(() => {
   const { device } = useContext(Context);
   return (
-    <Row className="d-flex">
+    <Row className="d-flex gap-2">
       {device.brands.map((brand) => (
-        <Col>
+        <Col md="auto">
           <Card
             style={{ cursor: "pointer" }}
             key={brand.id}

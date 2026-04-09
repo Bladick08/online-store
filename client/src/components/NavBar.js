@@ -18,7 +18,7 @@ const NavBar = observer(() => {
         </NavLink>
         {user.isAuth ? (
           <Nav
-            className="ms-auto d-flex align-items-center gap-2"
+            className="ms-auto d-flex flex-row align-items-center gap-2"
             style={{ color: "white" }}
           >
             <Button variant={"outline-light"} className="">

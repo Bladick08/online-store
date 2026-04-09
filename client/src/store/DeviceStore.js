@@ -29,6 +29,20 @@ export default class DeviceStore {
         rating: 4,
         img: "https://www.ixbt.com/img/n1/news/2020/4/2/samsung-galaxy-a51.jpg",
       },
+      {
+        id: 3,
+        name: "Samsung Galaxy A51",
+        price: 12000,
+        rating: 4,
+        img: "https://www.ixbt.com/img/n1/news/2020/4/2/samsung-galaxy-a51.jpg",
+      },
+      {
+        id: 4,
+        name: "Samsung Galaxy A51",
+        price: 12000,
+        rating: 4,
+        img: "https://www.ixbt.com/img/n1/news/2020/4/2/samsung-galaxy-a51.jpg",
+      },
     ];
     this._selectedType = {};
     this._selectedBrand = {};
