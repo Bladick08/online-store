@@ -18,7 +18,7 @@ export default class DeviceStore {
       {
         id: 1,
         name: "Iphone 12 Pro",
-        price: 25000,
+        price: 449,
         rating: 5,
         img: "https://www.ixbt.com/img/n1/news/2020/4/2/iphone-12-pro-max.jpg",
       },

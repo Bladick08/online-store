@@ -3,13 +3,15 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { NavLink } from "react-router-dom";
 import { Context } from "../index";
-import { SHOP_ROUTE } from "../utils/consts";
+import { ADMIN_ROUTE, LOGIN_ROUTE, SHOP_ROUTE } from "../utils/consts";
 import Button from "react-bootstrap/Button";
 import { observer } from "mobx-react-lite";
 import Container from "react-bootstrap/Container";
+import { useHistory } from "react-router-dom";
 
 const NavBar = observer(() => {
   const { user } = useContext(Context);
+  const history = useHistory();
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
@@ -21,10 +23,18 @@ const NavBar = observer(() => {
             className="ms-auto d-flex flex-row align-items-center gap-2"
             style={{ color: "white" }}
           >
-            <Button variant={"outline-light"} className="">
-              login
+            <Button
+              variant={"outline-light"}
+              onClick={() => history.push(LOGIN_ROUTE)}
+            >
+              log out
             </Button>
-            <Button variant={"outline-light"}>Administration</Button>
+            <Button
+              variant={"outline-light"}
+              onClick={() => history.push(ADMIN_ROUTE)}
+            >
+              Administration
+            </Button>
           </Nav>
         ) : (
           <Nav
