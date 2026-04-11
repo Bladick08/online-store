@@ -4,10 +4,9 @@ import { authRoutes, publicRoutes } from "../routes";
 import { SHOP_ROUTE } from "../utils/consts";
 import { useContext } from "react";
 import { Context } from "../index";
-import Admin from "../pages/Admin";
 const AppRouter = () => {
   const { user } = useContext(Context);
-
+  user.setIsAuth(true);
   console.log(user);
   return (
     <Switch>
