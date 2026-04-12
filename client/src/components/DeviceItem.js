@@ -13,7 +13,11 @@ const DeviceItem = ({ device }) => {
       onClick={() => history.push(DEVICE_ROUTE + "/" + device.id)}
     >
       <Card style={{ wight: 150, cursor: "pointer" }} border={"light"}>
-        <Image wight={150} height={150} src={device.img} />
+        <Image
+          wight={150}
+          height={150}
+          src={process.env.REACT_APP_API_URL + device.img}
+        />
         <div className="text-black-50 mt-1 d-flex justify-content-between align-item-center">
           <div>Samsung...</div>
           <div className="d-flex align-items-center">

@@ -2,12 +2,12 @@ const uuid = require("uuid");
 const path = require("path");
 const { Device, DeviceInfo } = require("../models/models");
 const ApiError = require("../error/ApiError");
-const { info } = require("console");
 const { title } = require("process");
 class deviceController {
   async create(req, res, next) {
     try {
-      let { name, price, brandId, typeId } = req.body;
+      let { name, price, brandId, typeId, info } = req.body;
+      console.log(req.files);
       const { img } = req.files;
       let fileName = uuid.v4() + ".jpg";
       img.mv(path.resolve(__dirname, "..", "static", fileName));

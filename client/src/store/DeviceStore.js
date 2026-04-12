@@ -2,48 +2,9 @@ import { makeAutoObservable } from "mobx";
 
 export default class DeviceStore {
   constructor() {
-    this._types = [
-      { id: 1, name: "Refrigerators" },
-      { id: 2, name: "Smartphones" },
-      { id: 3, name: "Laptops" },
-      { id: 4, name: "TV" },
-    ];
-    this._brands = [
-      { id: 1, name: "Samsung" },
-      { id: 2, name: "Apple" },
-      { id: 3, name: "Lenovo" },
-      { id: 4, name: "Asus" },
-    ];
-    this._devices = [
-      {
-        id: 1,
-        name: "Iphone 12 Pro",
-        price: 449,
-        rating: 5,
-        img: "https://www.ixbt.com/img/n1/news/2020/4/2/iphone-12-pro-max.jpg",
-      },
-      {
-        id: 2,
-        name: "Samsung Galaxy A51",
-        price: 12000,
-        rating: 4,
-        img: "https://www.ixbt.com/img/n1/news/2020/4/2/samsung-galaxy-a51.jpg",
-      },
-      {
-        id: 3,
-        name: "Samsung Galaxy A51",
-        price: 12000,
-        rating: 4,
-        img: "https://www.ixbt.com/img/n1/news/2020/4/2/samsung-galaxy-a51.jpg",
-      },
-      {
-        id: 4,
-        name: "Samsung Galaxy A51",
-        price: 12000,
-        rating: 4,
-        img: "https://www.ixbt.com/img/n1/news/2020/4/2/samsung-galaxy-a51.jpg",
-      },
-    ];
+    this._types = [];
+    this._brands = [];
+    this._devices = [];
     this._selectedType = {};
     this._selectedBrand = {};
     makeAutoObservable(this);
