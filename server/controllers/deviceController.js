@@ -31,7 +31,7 @@ class deviceController {
       }
       return res.json(device);
     } catch (e) {
-      next(ApiError.BadRequest(e.message));
+      next(ApiError.badRequest(e.message));
     }
   }
 
